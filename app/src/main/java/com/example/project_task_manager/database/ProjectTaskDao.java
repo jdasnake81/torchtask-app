@@ -22,6 +22,9 @@ public interface ProjectTaskDao {
     @Query("SELECT * FROM projecttask WHERE project = :project")
     List<ProjectTask> findTasksInProject(String project);
 
+    @Query("SELECT * FROM projecttask WHERE project = :project AND status = :status")
+    List<ProjectTask> findTasksWithStatusInProject(String project, String status);
+
     @Query("SELECT * FROM projecttask WHERE status = :status")
     List<ProjectTask> findTasksWithStatus(String status);
 

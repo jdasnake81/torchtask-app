@@ -20,6 +20,7 @@ import com.example.project_task_manager.viewmodels.ProjectTaskViewModel;
 public class ProjectTaskListFragment extends Fragment {
     public ProjectTaskListFragment() { super(R.layout.task_list_fragment);}
     ProjectTaskViewModel viewModel;
+    String status = "Not Started";
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
